@@ -8,7 +8,7 @@ var noAutoplay = {
     for (i = 0; i < iframes.length; i++) {
         src = iframes[i].getAttribute('src');
 
-        if (!src.match(/vimeo/i)) continue;
+        if (!src || !src.match(/vimeo/i)) continue;
 
         if (src.match(/autoplay/i)) {
             src = src.replace('autoplay=1', 'autoplay=0');
